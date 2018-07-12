@@ -1,4 +1,6 @@
--r requirements-dev.txt
-gunicorn
-psycopg2
+dj-database-url==0.5.0
+Django==2.1b1
+psycopg2==2.7.5
+pytz==2018.4
+reverse==0.1.0
 
