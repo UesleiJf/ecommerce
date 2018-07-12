@@ -26,19 +26,19 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 # SECURITY WARNING: keep the secret key used in production secret!
 
 # Descomente abaixo para localhost
-SECRET_KEY = 'of0@h0##8jip41v_r*#l@u8!9mivdvq_$!u649o4m9dxv8zy*l'
+# SECRET_KEY = 'of0@h0##8jip41v_r*#l@u8!9mivdvq_$!u649o4m9dxv8zy*l'
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
-ALLOWED_HOSTS = []
+# DEBUG = True
+# ALLOWED_HOSTS = []
 
 # Descomente abaixo para servidor
-# SECRET_KEY = config('SECRET_KEY')
-# DEBUG = config('DEBUG', default=False, cast=bool)
-# ALLOWED_HOSTS = ['djangoecommerce18.herokuapp.com', 'http://127.0.0.1:8000/']
+SECRET_KEY = config('SECRET_KEY')
+DEBUG = config('DEBUG', default=False, cast=bool)
+ALLOWED_HOSTS = ['djangoecommerce18.herokuapp.com', 'http://127.0.0.1:8000/']
 
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
 
 # Application definition
 
