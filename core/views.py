@@ -1,7 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
 from catalog.models import Category
+from .forms import ContactForm
 
 
 def index(request):
@@ -9,8 +9,13 @@ def index(request):
 
 
 def contact(request):
-    return render(request, 'contact.html')
+    if request.method == 'POST':
+        form = ContactForm(request.POST)
+    else:
+        form = ContactForm()
+    context = {
+        'form': form
+    }
+    return render(request, 'contact.html', context)
 
 
-def product(request):
-    return render(request, 'product.html')
