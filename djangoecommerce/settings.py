@@ -27,11 +27,8 @@ SECRET_KEY = 'of0@h0##8jip41v_r*#l@u8!9mivdvq_$!u649o4m9dxv8zy*l'
 DEBUG = False
 
 # SECURITY WARNING: don't run with debug turned on in production!
-# Para produção Debug = False, para localhost Dbug = True
-# DEBUG = True
 
 ALLOWED_HOSTS = []
-
 
 # Application definition
 
@@ -142,6 +139,12 @@ SECURE_PROXY_SSL_HEADER = ('HTTP_X_FORWARDED_PROTO', 'https')
 ALLOWED_HOSTS = ['*']
 
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
+
+#email
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'uesleijf@gmail.com'
+EMAIL_HOST_PASSWORD = 'residentevilseis6leonclairehunk'
+DEFAULT_FROM_EMAIL = ''
 
 try:
     from .local_settings import *
