@@ -141,9 +141,9 @@ ALLOWED_HOSTS = ['*']
 STATIC_ROOT = os.path.join(PROJECT_ROOT, 'staticfiles')
 
 #email
-EMAIL_HOST = 'smtp.gmail.com'
-EMAIL_HOST_USER = 'uesleijf@gmail.com'
-EMAIL_HOST_PASSWORD = 'residentevilseis6leonclairehunk'
+EMAIL_HOST = ''
+EMAIL_HOST_USER = ''
+EMAIL_HOST_PASSWORD = ''
 DEFAULT_FROM_EMAIL = ''
 
 try:
