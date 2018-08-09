@@ -25,7 +25,7 @@ PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
 SECRET_KEY = 'of0@h0##8jip41v_r*#l@u8!9mivdvq_$!u649o4m9dxv8zy*l'
 
 # Para produção Debug = True, para localhost Dbug = false
-DEBUG = False
+DEBUG = True
 
 # SECURITY WARNING: don't run with debug turned on in production!
 
