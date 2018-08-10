@@ -47,3 +47,16 @@ class ContactViewTestCase(TestCase):
         self.assertTrue(response.context['success'])
         self.assertEquals(len(mail.outbox), 1)
         self.assertEquals(mail.outbox[0].subject, 'Testando Umbrella Mensagem')
+
+
+class LoginViewtestCase(TestCase):
+
+
+    def setUp(self):
+        self.client = Client()
+        self.login_url = reverse('login')
+
+    def test_login_ok(self):
+        response = self.client.get(self.login_url)
+        self.assertEquals(response.status_code, 200)
+        self.assertTemplateUsed(response, 'login.html')
