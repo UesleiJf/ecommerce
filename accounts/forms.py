@@ -1,6 +1,9 @@
+# coding=utf-8
+
 from django.contrib.auth.forms import UserCreationForm
-from .models import User
 from django import forms
+
+from .models import User
 
 
 class UserAdminCreationForm(UserCreationForm):
@@ -13,5 +16,5 @@ class UserAdminCreationForm(UserCreationForm):
 class UserAdminForm(forms.ModelForm):
 
     class Meta:
-        model= User
+        model = User
         fields = ['username', 'email', 'name', 'is_active', 'is_staff']

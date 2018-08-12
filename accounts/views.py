@@ -1,9 +1,11 @@
+# coding=utf-8
+
 from django.shortcuts import render
 from django.views.generic import CreateView
-from .forms import UserAdminCreationForm
 from django.urls import reverse_lazy
 
 from .models import User
+from .forms import UserAdminCreationForm
 
 
 class RegisterView(CreateView):

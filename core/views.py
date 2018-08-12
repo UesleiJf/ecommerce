@@ -1,12 +1,10 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from catalog.models import Category
-from .forms import ContactForm
-from django.urls import reverse_lazy
-from django.contrib.auth.forms import UserCreationForm
-from django.views.generic import View, TemplateView, CreateView
-from django.contrib.auth import get_user_model
+# coding=utf-8
 
+from django.contrib.auth import get_user_model
+from django.shortcuts import render
+from django.views.generic import TemplateView
+
+from .forms import ContactForm
 
 User = get_user_model()
 
@@ -21,7 +19,6 @@ index = IndexView.as_view()
 
 def contact(request):
     success = False
-
     form = ContactForm(request.POST or None)
     if form.is_valid():
         form.send_mail()
@@ -31,6 +28,3 @@ def contact(request):
         'success': success
     }
     return render(request, 'contact.html', context)
-
-
-
