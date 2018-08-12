@@ -10,6 +10,7 @@ from django.contrib.auth import get_user_model
 
 User = get_user_model()
 
+
 class IndexView(TemplateView):
 
     template_name = 'index.html'
@@ -32,12 +33,4 @@ def contact(request):
     return render(request, 'contact.html', context)
 
 
-class RegisterView(CreateView):
 
-    form_class = UserCreationForm
-    template_name = 'register.html'
-    model = User
-    success_url = reverse_lazy('index')
-
-
-register = RegisterView.as_view()
