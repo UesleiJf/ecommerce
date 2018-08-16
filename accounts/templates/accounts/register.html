@@ -2,7 +2,7 @@
 
 {% load widget_tweaks %}
 
-{% block title %} Registro | {{ block.super }} {% endblock %}
+{% block title %}Registro | {{ block.super }}{% endblock %}
 
 {% block container %}
 <div class="row">
@@ -19,7 +19,7 @@
             {% endfor %}
             <fieldset>
                 {% for field in form %}
-                    <div class="form-group{% if field.errors %} has-error{% endif %}">
+                <div class="form-group{% if field.errors %} has-error{% endif %}">
                   <label for="{{ field.auto_id }}" class="col-md-3 control-label">{{ field.label }}</label>
                   <div class="col-md-9">
                     {% render_field field class="form-control" %}
