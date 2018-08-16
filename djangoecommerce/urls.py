@@ -25,7 +25,7 @@ urlpatterns = [
     url(r'^$', views.index, name='index'),
     url(r'^contato/$', views.contact, name='contact'),
     url(r'^entrar/$', LoginView.as_view(template_name='login.html'), name='login'),
-    url(r'^sair/$', LogoutView.as_view(template_name='index'), name='logout'),
+    url(r'^sair/$', LogoutView.as_view(template_name='index.html'), name='logout'),
     url(r'^catalogo/', include(('catalog.urls', 'catalog'), namespace='catalog')),
     url(r'^conta/', include(('accounts.urls', 'accounts'), namespace='accounts')),
     url(r'^admin/', admin.site.urls),
