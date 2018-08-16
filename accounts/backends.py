@@ -1,13 +1,13 @@
 # coding=utf-8
 
-from django.contrib.auth.backends import ModelBackend as BaseModelBackend
+from django.contrib.auth.backends import ModelBackend
 
 from .models import User
 
 
-class ModelBackend(BaseModelBackend):
+class ModelBackend(ModelBackend):
 
-    def authenticate(self, username=None, password=None):
+    def authenticate(self, username=None, password=None, **kwargs):
         if not username is None:
             try:
                 user = User.objects.get(email=username)
