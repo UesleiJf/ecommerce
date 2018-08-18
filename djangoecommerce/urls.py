@@ -28,5 +28,6 @@ urlpatterns = [
     url(r'^sair/$', LogoutView.as_view(template_name='index.html'), name='logout'),
     url(r'^catalogo/', include(('catalog.urls', 'catalog'), namespace='catalog')),
     url(r'^conta/', include(('accounts.urls', 'accounts'), namespace='accounts')),
+    url(r'^compras/', include(('checkout.urls', 'checkout'), namespace='checkout')),
     url(r'^admin/', admin.site.urls),
 ]
