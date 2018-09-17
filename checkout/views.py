@@ -84,6 +84,7 @@ class CheckoutView(LoginRequiredMixin, TemplateView):
             return redirect('checkout:cart_item')
         return super(CheckoutView, self).get(request, *args, **kwargs)
 
+
 create_cartitem = CreateCartItemView.as_view()
 cart_item = CartItemView.as_view()
 checkout = CheckoutView.as_view()
