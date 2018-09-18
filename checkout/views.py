@@ -71,9 +71,7 @@ class CheckoutView(LoginRequiredMixin, TemplateView):
     template_name = 'checkout/checkout.html'
 
     def get(self, request, *args, **kwargs):
-
         session_key = request.session.session_key
-
         if session_key and CartItem.objects.filter(cart_key=session_key).exists():
             cart_items = CartItem.objects.filter(cart_key=session_key)
             order = Order.objects.create_order(
@@ -82,7 +80,9 @@ class CheckoutView(LoginRequiredMixin, TemplateView):
         else:
             messages.info(request, 'Não há itens no carrinho de compras')
             return redirect('checkout:cart_item')
-        return super(CheckoutView, self).get(request, *args, **kwargs)
+        response = super(CheckoutView, self).get(request, *args, **kwargs)
+        response.context_data['order'] = order
+        return response
 
 
 create_cartitem = CreateCartItemView.as_view()
