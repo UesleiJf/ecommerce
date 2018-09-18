@@ -5,6 +5,7 @@ django-widget-tweaks==1.4.2
 easy-thumbnails==2.5
 gunicorn==19.9.0
 model-mommy==1.6.0
+pagseguro==0.3.4
 Pillow==5.2.0
 psycopg2==2.7.5
 pytz==2018.4
