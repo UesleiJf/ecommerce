@@ -6,6 +6,7 @@ from django.views import generic
 
 from .models import Product, Category
 from django.db import models
+from watson import search as watson
 
 
 class ProductListView(generic.ListView):
@@ -19,9 +20,7 @@ class ProductListView(generic.ListView):
         q = self.request.GET.get('q', '')
 
         if q:
-            queryset = queryset.filter(
-                models.Q(name__icontains=q) | models.Q(category__name__icontains=q) | models.Q(description__icontains=q)
-            )
+            queryset = watson.filter(queryset, q)
         return queryset
 
 

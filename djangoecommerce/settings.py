@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     # libs
     'widget_tweaks',
     'easy_thumbnails',
+    'watson',
     
     # apps
     'core',
