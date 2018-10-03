@@ -45,7 +45,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'easy_thumbnails',
     'watson',
-    
+
     # apps
     'core',
     'accounts',
@@ -177,6 +177,14 @@ MESSAGE_TAGS = {
     messages_constants.WARNING: 'warning',
     messages_constants.ERROR: 'danger',
 }
+
+
+PAGSEGURO_TOKEN = ''
+PAGSEGURO_EMAIL = 'uesleijf@gmail.com'
+PAGSEGURO_SANDBOX = True
+
+PAYPAL_TEST = True
+PAYPAL_EMAIL = 'contato@gilenofilho.com.br'
 
 THUMBNAIL_ALIASES = {
     '': {
