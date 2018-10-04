@@ -10,4 +10,5 @@ urlpatterns = [
     url(r'^alterar-dados/$', views.update_user, name='update_user'),
     url(r'^alterar-senha/$', views.update_password, name='update_password'),
     url(r'^registro/$', views.register, name='register'),
+    url(r'^recuperar/$', views.recover, name='recover'),
 ]

@@ -22,6 +22,13 @@ class RegisterView(CreateView):
     success_url = reverse_lazy('index')
 
 
+class RecoverView(CreateView):
+
+    model = User
+    template_name = 'accounts/recuperarLogin.html'
+    form_class = UserAdminCreationForm
+
+
 class UpdateUserView(LoginRequiredMixin, UpdateView):
 
     model = User
@@ -53,3 +60,4 @@ index = IndexView.as_view()
 register = RegisterView.as_view()
 update_user = UpdateUserView.as_view()
 update_password = UpdatePasswordView.as_view()
+recover = RecoverView.as_view()
