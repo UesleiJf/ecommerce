@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'widget_tweaks',
     'easy_thumbnails',
     'watson',
+    'paypal.standard.ipn',
 
     # apps
     'core',
@@ -184,7 +185,7 @@ PAGSEGURO_EMAIL = 'uesleijf@gmail.com'
 PAGSEGURO_SANDBOX = True
 
 PAYPAL_TEST = True
-PAYPAL_EMAIL = 'contato@gilenofilho.com.br'
+PAYPAL_EMAIL = 'uesleijf@gmail.com'
 
 THUMBNAIL_ALIASES = {
     '': {
