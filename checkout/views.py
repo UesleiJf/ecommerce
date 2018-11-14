@@ -30,9 +30,9 @@ class CreateCartItemView(RedirectView):
             self.request.session.session_key, product
         )
         if created:
-            messages.success(self.request, 'Produto adicionado com sucesso')
+            messages.success(self.request, 'Produto adicionado com sucesso!')
         else:
-            messages.success(self.request, 'Produto atualizado com sucesso')
+            messages.success(self.request, 'Produto atualizado com sucesso!')
         return reverse('checkout:cart_item')
 
 
