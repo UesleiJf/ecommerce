@@ -1,5 +1,5 @@
 .idea
 *.sqlite3
-.venv
+venv/
 
 local_settings.py
